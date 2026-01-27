@@ -1,9 +1,8 @@
 <?php
 /*
 Plugin Name:  Cheesecake
-Plugin URI:   https://petermarshall.ca
 Description:  Cheesy enhancements for your WordPress dashboard.
-Version:      0.3
+Version:      0.3.1
 Author:       Peter Marshall
 Author URI:   https://petermarshall.ca
 License:      GPL2
@@ -46,6 +45,6 @@ height: auto;
 -webkit-user-drag: none;
 }
 </style>
-<a href="https://petermarshall.ca/" target="_blank"><img src="<?php echo CHEESECAKE_PLUGIN_URL . 'assets/petermarshall-terminal-wordmark.avif' ?>" /></a>
-'<?php
+<a href="https://petermarshall.ca/" target="_blank"><img src="<?php echo CHEESECAKE_PLUGIN_URL . 'assets/petermarshall-glowing-cube-wordmark.avif' ?>" /></a>
+<?php
 }
