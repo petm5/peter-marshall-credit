@@ -12,10 +12,12 @@ Text Domain:  cheesecake
 Domain Path:  /languages
 */
 
+define( 'CHEESECAKE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+
 add_action( 'admin_enqueue_scripts', 'enqueue_admin_custom_css' );
 
 function enqueue_admin_custom_css() {
-        wp_enqueue_style( 'admin-custom', plugin_dir_url( __FILE__ ) . 'css/admin-custom.css?r=2' );
+        wp_enqueue_style( 'admin-custom', CHEESECAKE_PLUGIN_URL . 'css/admin-custom.css?r=2' );
 }
 
 add_action('wp_dashboard_setup', 'cheesecake_add_dashboard_widgets');
@@ -26,7 +28,6 @@ function cheesecake_add_dashboard_widgets() {
 }
 
 function cheesecake_widget_credits() {
-        $plugin_dir = plugin_dir_path( __FILE__ );
 ?>
 <style>
 #cheesecake_widget .postbox-header {
@@ -45,6 +46,6 @@ height: auto;
 -webkit-user-drag: none;
 }
 </style>
-<a href="https://petermarshall.ca/" target="_blank"><img src="<?php echo $plugin_dir . 'assets/petermarshall-terminal-wordmark.avif' ?>" /></a>
+<a href="https://petermarshall.ca/" target="_blank"><img src="<?php echo CHEESECAKE_PLUGIN_URL . 'assets/petermarshall-terminal-wordmark.avif' ?>" /></a>
 '<?php
 }
