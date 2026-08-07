@@ -30,9 +30,12 @@ function pm_credit_add_dashboard_widgets() {
 function pm_credit_widget_credits() {
 	?>
 	<div class="pm-credit-wrapper hndle">
-		<a href="https://petermarshall.ca/" target="_blank">
+		<div class="pm-credit-bg-section">
 			<img src="<?php echo esc_url( plugin_dir_url( __FILE__ ) . 'assets/petermarshall-glowing-cube-wordmark.avif' ) ?>" alt="Logo" />
-		</a>
+		</div>
+		<div class="pm-credit-overlay-button-section">
+			<a class="pm-credit-button" href="https://petermarshall.ca/" target="_blank">Proudly designed by Peter Marshall</a>
+		</div>
 	</div>
 	<?php
 }
@@ -53,14 +56,44 @@ function pm_credit_widget_admin_styles() {
 				margin: 0;
 				padding: 0;
 			}
+			#pm_credit_widget .pm-credit-wrapper {
+				position: relative;
+				display: grid;
+				grid-template-rows: 3fr 2fr;
+				grid-template-columns: 1fr;
+				width: 100%;
+				.pm-credit-bg-section {
+					grid-row: 1 / -1;
+				    grid-column: 1;
+				}
+				.pm-credit-overlay-button-section {
+					grid-row: 2;
+				    grid-column: 1;
+				    justify-self: center;
+					align-self: center;
+				}
+			}
 			#pm_credit_widget a {
 				display: flex;
-				cursor: unset;
 			}
 			#pm_credit_widget img {
 				width: 100%;
 				height: auto;
+				display: block;
 				-webkit-user-drag: none;
+			}
+			#pm_credit_widget .pm-credit-button {
+				background-color: #67676736;
+				color: #f7f7f7;
+				text-shadow: 0 0 8px #000a;
+				padding: 1rem 1.5rem;
+				border-radius: 2rem;
+				box-shadow: 0 0 2rem #0002, 0 0 .5rem #0001;
+				border: 1.3px solid #67676761;
+				text-decoration: none;
+				font-weight: 500;
+				font-size: 1.4rem;
+				font-family: Cantarell;
 			}
         </style>
         <?php
