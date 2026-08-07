@@ -2,7 +2,7 @@
 /*
 Plugin Name:  Designed by Peter Marshall
 Description:  Adds a credit banner to the dashboard landing page.
-Version:      0.1.2
+Version:      0.1.3
 Author:       Peter Marshall
 Author URI:   https://petermarshall.ca
 License:      GPL2
