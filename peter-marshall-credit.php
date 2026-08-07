@@ -18,8 +18,6 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
 	'peter-marshall-credit'
 );
 
-$myUpdateChecker->setBranch('main');
-
 add_action('wp_dashboard_setup', 'pm_credit_add_dashboard_widgets');
 
 function pm_credit_add_dashboard_widgets() {
