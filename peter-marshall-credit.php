@@ -9,6 +9,17 @@ License:      GPL2
 License URI:  https://www.gnu.org/licenses/gpl-2.0.html
 */
 
+require 'plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/petm5/peter-marshall-credit/',
+	__FILE__,
+	'peter-marshall-credit'
+);
+
+$myUpdateChecker->setBranch('main');
+
 define( 'PM_CREDIT_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 add_action('wp_dashboard_setup', 'pm_credit_add_dashboard_widgets');
