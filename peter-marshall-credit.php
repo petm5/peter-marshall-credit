@@ -9,7 +9,7 @@ License:      GPL2
 License URI:  https://www.gnu.org/licenses/gpl-2.0.html
 */
 
-require 'plugin-update-checker/plugin-update-checker.php';
+require __DIR__ . '/vendor/autoload.php';
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 $myUpdateChecker = PucFactory::buildUpdateChecker(

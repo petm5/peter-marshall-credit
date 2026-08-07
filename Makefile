@@ -1,5 +1,5 @@
 TARGET = peter-marshall-credit.zip
-FILES = peter-marshall-credit.php assets plugin-update-checker
+FILES = peter-marshall-credit.php assets vendor
 
 all: build
 
