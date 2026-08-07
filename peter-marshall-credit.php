@@ -29,7 +29,7 @@ function pm_credit_widget_credits() {
 	?>
 	<div class="pm-credit-wrapper hndle">
 		<div class="pm-credit-bg-section">
-			<img src="<?php echo esc_url( plugin_dir_url( __FILE__ ) . 'assets/petermarshall-glowing-cube-wordmark.avif' ) ?>" alt="Logo" />
+			<img src="<?php echo esc_url( plugin_dir_url( __FILE__ ) . 'assets/petermarshall-glowing-cube-wordmark.avif?v=2' ) ?>" alt="Logo" />
 		</div>
 		<div class="pm-credit-overlay-button-section">
 			<a class="pm-credit-button" href="https://petermarshall.ca/" target="_blank">Proudly designed by Peter Marshall</a>
