@@ -84,13 +84,13 @@ function pm_credit_widget_admin_styles() {
 				background-color: #67676736;
 				color: #f7f7f7;
 				text-shadow: 0 0 8px #000a;
-				padding: 1rem 1.5rem;
+				padding: 0.7em 1.1em;
 				border-radius: 2rem;
 				box-shadow: 0 0 2rem #0002, 0 0 .5rem #0001;
 				border: 1.3px solid #67676761;
 				text-decoration: none;
 				font-weight: 500;
-				font-size: 1.4rem;
+				font-size: clamp(0.9rem, 4.4vw, 1.4rem);
 				font-family: Cantarell;
 			}
         </style>
