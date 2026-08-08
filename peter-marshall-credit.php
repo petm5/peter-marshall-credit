@@ -81,7 +81,7 @@ function pm_credit_widget_admin_styles() {
 				-webkit-user-drag: none;
 			}
 			#pm_credit_widget .pm-credit-button {
-				background-color: #67676736;
+				background-color: #6060604a;
 				color: #f7f7f7;
 				text-shadow: 0 0 8px #000a;
 				padding: 0.7em 1.1em;
@@ -92,6 +92,7 @@ function pm_credit_widget_admin_styles() {
 				font-weight: 500;
 				font-size: clamp(0.9rem, 4.4vw, 1.4rem);
 				font-family: Cantarell;
+				backdrop-filter: blur(5px);
 			}
         </style>
         <?php
