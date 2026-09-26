@@ -2,7 +2,7 @@
 /*
 Plugin Name:  Designed by Peter Marshall
 Description:  Adds a credit banner to the dashboard landing page.
-Version:      0.1.4
+Version:      0.1.5
 Author:       Peter Marshall
 Author URI:   https://petermarshall.ca
 License:      GPL2
@@ -27,14 +27,16 @@ function pm_credit_add_dashboard_widgets() {
 
 function pm_credit_widget_credits() {
 	?>
-	<div class="pm-credit-wrapper hndle">
-		<div class="pm-credit-bg-section">
-			<img src="<?php echo esc_url( plugin_dir_url( __FILE__ ) . 'assets/petermarshall-glowing-cube-wordmark.avif?v=3' ) ?>" alt="Logo" />
+	<a class="pm-credit-wrapper-link" href="https://petermarshall.ca/" target="_blank">
+		<div class="pm-credit-wrapper">
+			<div class="pm-credit-bg-section">
+				<img src="<?php echo esc_url( plugin_dir_url( __FILE__ ) . 'assets/petermarshall-glowing-cube-wordmark.avif?v=3' ) ?>" alt="Logo" />
+			</div>
+			<div class="pm-credit-overlay-text-section">
+				<div class="pm-credit-overlay-text">Proudly designed by Peter Marshall</div>
+			</div>
 		</div>
-		<div class="pm-credit-overlay-button-section">
-			<a class="pm-credit-button" href="https://petermarshall.ca/" target="_blank">Proudly designed by Peter Marshall</a>
-		</div>
-	</div>
+	</a>
 	<?php
 }
 
@@ -44,9 +46,6 @@ function pm_credit_widget_admin_styles() {
     if ( $screen && $screen->id === 'dashboard' ) {
         ?>
         <style>
-			#pm_credit_widget .postbox-header {
-				display: none;
-			}
 			#pm_credit_widget {
 				cursor: move;
 			}
@@ -64,7 +63,7 @@ function pm_credit_widget_admin_styles() {
 					grid-row: 1 / -1;
 				    grid-column: 1;
 				}
-				.pm-credit-overlay-button-section {
+				.pm-credit-overlay-text-section {
 					grid-row: 2;
 				    grid-column: 1;
 				    justify-self: center;
@@ -80,7 +79,7 @@ function pm_credit_widget_admin_styles() {
 				display: block;
 				-webkit-user-drag: none;
 			}
-			#pm_credit_widget .pm-credit-button {
+			#pm_credit_widget .pm-credit-overlay-text {
 				background-color: #6060604a;
 				color: #f7f7f7;
 				text-shadow: 0 0 8px #000a;
